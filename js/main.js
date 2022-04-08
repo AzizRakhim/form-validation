@@ -45,7 +45,7 @@ elEmailInput.addEventListener("keyup", () => {
   let elEmailHint = document.querySelector(".email-hint");
 
   try{
-    if(!emailText.includes("@.")){
+    if(!emailText.includes("@gmail")){
       elEmailInput.style.outline = "2px solid #ee0004";
       elEmailHint.style.display = "block";
       elEmailHint.style.color = "#ee0004";
@@ -163,4 +163,31 @@ elSubmitBtn.addEventListener("click", () => {
   elPhoneInput.value = "";
   elPasswordInput.value = "";
   elConfirmInput.value = "";
+  
+  let elOutput = document.querySelector(".name-hint");
+  elOutput.style.display = "none";
+  elNameInput.style.outline = "none";
+
+  elEmailInput.style.outline = "none";
+  let elOutputTwo = document.querySelector(".email-hint");
+  elOutputTwo.style.color = "#595959";
+  elOutputTwo.innerText = "Please enter your email adress";
+  let elError = document.querySelector(".bxs-error-circle");
+  elError.style.display = "none";
+
+  elPhoneInput.style.outline = "none";
+  let elOutputThree = document.querySelector(".phone-hint");
+  elOutputThree.style.color = "#595959";
+  elOutputThree.innerText = "Optional - we never use this for marketing"
+  elPhoneInput.value = "+998";
+
+  elPasswordInput.style.outline = "none";
+  let elOutputFour = document.querySelector(".password-hint");
+  elOutputFour.style.color = "#595959";
+  elOutputFour.innerText = "Please enter your password";
+
+  elConfirmInput.style.outline = "none";
+  let elOutputFive = document.querySelector(".confirm-hint");
+  elOutputFive.style.color = "#595959";
+  elOutputFive.innerText = "Please confirm your password";
 })

@@ -505,6 +505,7 @@ body {
   color: #fff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-weight: 600;
 }
 
 .hero__btn:hover {
